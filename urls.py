@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import (
-    index,  # Changed 'home' to 'index'
+    home,  # Changed 'home' to 'index'
     register,
     user_login,
     user_logout,
@@ -43,7 +43,7 @@ from .views import (
 )
 
 urlpatterns = [
-    path('', index, name='home'),  # Changed 'home' to 'index'
+    path('', home, name='home'),  # Changed 'home' to 'index'
     path('register/', register, name='register'),
     path('login/', CustomLoginView.as_view(), name='login'),  # Keep the login path here
     path('logout/', user_logout, name='logout'),
